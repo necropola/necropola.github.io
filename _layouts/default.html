@@ -12,10 +12,16 @@
     
     <!-- Social media -->
     <meta name="twitter:card" value="summary" />
+	<meta name="twitter:site:id" value="@necropola" />
+	<meta name="twitter:creator" value="@necropola" />
+	<meta name="twitter:title" value="{{ site.title | default: site.github.repository_name }}" />
+	<meta name="twitter:description" value="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}" />
+    <meta name="twitter:image" content="https://{{site.github.repository_name}}/assets/images/necropola-preview-960x960.png" />
+    <meta property="og:title" content="{{ site.title | default: site.github.repository_name }}" />
     <meta property="og:title" content="{{ site.title | default: site.github.repository_name }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://{{site.github.repository_name}}/" />
-    <meta property="og:image" content="https://{{site.github.repository_name}}/assets/images/Undead_chicken_square_gray.png" />
+    <meta property="og:image" content="https://{{site.github.repository_name}}/assets/images/necropola-preview-960x960.png" />
     <meta property="og:description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}" />
     {% if site.google_analytics %}
     <!-- Google Analytics -->
@@ -35,12 +41,25 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="{{site.github.owner_url}}">View on GitHub</a>
+        <header class="inner" style="padding:10px 10px 10px 10px;">
+          <!-- <a id="forkme_banner" href="{{site.github.owner_url}}">View on GitHub</a> -->
+		  <a href="{{site.github.owner_url}}"
+			 style="display:block;position:absolute;top:0;right:0;background-color:transparent;margin:0;width:25%;padding:4ex 0 0 0;">
+			  <img src="./assets/images/rain-fighters-logo-gen1-Necropola-640x640.png"
+				   style="width:100%;border-style:none;box-shadow:none;margin:0;padding:0;"/></a>
 
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 
+			<div style="display:flex;justify-content: space-between;">
+				<div class="g-plus" data-annotation="bubble" data-height="24" data-action="share" style="witdh:auto%;"></div>
+				<a class="twitter-share-button" style="width:auto;"
+					href="https://twitter.com/share"
+				   	data-size="large"
+				    data-text="#necropola.githib.io"
+				    data-via="necropola"
+				   	data-url="{{ site.url }}{{ site.baseurl }}/">Tweet</a>
+			
           {% if site.show_downloads %}
             <section id="downloads">
               <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
