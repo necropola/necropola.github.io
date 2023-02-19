@@ -1,6 +1,6 @@
 # Necropola
 - [Necropola on GitHub](https://github.com/necropola)
-- [Necropola on Fosstodon](https://fosstodon.org/web/accounts/254850)
+- [Necropola on GitLab](https://gitlab.com/necropola)
 
 ## AudioPick
 A *Chrome Extension* to pick a default audio output device for HTML5 audio and video elements
